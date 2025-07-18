@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.connectButton {
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.connectButton:hover {
+  background-color: #1d4ed8;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.accountInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chainButton {
+  background-color: #f3f4f6;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  color: #374151;
+}
+
+.chainButton:hover {
+  background-color: #e5e7eb;
+}
+
+.chainIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.chainIconImage {
+  width: 100%;
+  height: 100%;
+}
+
+.accountButton {
+  background-color: #eff6ff;
+  color: #2563eb;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.accountButton:hover {
+  background-color: #dbeafe;
+} 

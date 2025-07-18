@@ -1,0 +1,17 @@
+[package]
+name = "move_to_learn_nft"
+version = "1.0.0"
+authors = []
+
+[addresses]
+move_to_learn_nft = "86314c7111dfd122845a1de317550ffd4371c18e9dfe9c316597ef9ed1c8ee76"
+default = "86314c7111dfd122845a1de317550ffd4371c18e9dfe9c316597ef9ed1c8ee76"
+my_first_module = "86314c7111dfd122845a1de317550ffd4371c18e9dfe9c316597ef9ed1c8ee76"
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"
+
+[dev-dependencies]

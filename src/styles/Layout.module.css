@@ -1,0 +1,22 @@
+/* 布局容器 */
+.layout {
+  min-height: 100vh;
+  padding-top: 92px; /* 导航栏高度 */
+  background-color: #f8fafc;
+}
+
+.main {
+  width: 100%;
+  min-height: calc(100vh - 92px); /* 减去导航栏高度 */
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .layout {
+    padding-top: 80px; /* 移动端导航栏稍微低一些 */
+  }
+  
+  .main {
+    min-height: calc(100vh - 80px);
+  }
+} 

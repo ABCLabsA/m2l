@@ -1,0 +1,103 @@
+.connectedWallet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #f0f7ff;
+  border: 1px solid #3b82f6;
+  border-radius: 8px;
+  gap: 1rem;
+}
+
+.walletInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.accountInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.walletName {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.875rem;
+}
+
+.accountAddress {
+  font-family: monospace;
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+.walletIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.disconnectButton {
+  padding: 0.5rem 1rem;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+.disconnectButton:hover {
+  background-color: #dc2626;
+}
+
+.walletSelection {
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.walletSelection h3 {
+  margin: 0 0 1rem 0;
+  color: #1f2937;
+  font-size: 1.125rem;
+}
+
+.walletList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.walletButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.walletButton:hover:not(:disabled) {
+  border-color: #3b82f6;
+  background-color: #f8fafc;
+}
+
+.walletButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.notInstalled {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: #ef4444;
+} 

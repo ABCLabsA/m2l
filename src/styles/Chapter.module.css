@@ -1,0 +1,514 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 250px; /* 侧边栏宽度 */
+}
+
+.loading, .error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+.backLink {
+  margin-top: 1rem;
+  color: #3498db;
+  text-decoration: none;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.chapterHeader {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #eee;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.breadcrumb a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.description {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.content {
+  background-color: white;
+  padding: 2rem;
+  min-height: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.chapterContent {
+  line-height: 1.8;
+  color: #333;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow-x: auto;
+}
+
+.chapterContent h2 {
+  font-size: 1.6rem;
+  margin: 2rem 0 1rem;
+  color: #2c3e50;
+}
+
+.chapterContent h3 {
+  font-size: 1.3rem;
+  margin: 1.5rem 0 1rem;
+  color: #2c3e50;
+}
+
+.chapterContent p {
+  margin: 1rem 0;
+}
+
+.chapterContent ul, .chapterContent ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.chapterContent li {
+  margin-bottom: 0.5rem;
+}
+
+.chapterContent pre {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow: auto;
+  margin: 1.5rem 0;
+}
+
+.chapterContent code {
+  font-family: monospace;
+  background-color: #f8f9fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+/* 修复markdown图片溢出问题 */
+.chapterContent img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  display: block;
+}
+
+/* 确保图片在段落中也不会溢出 */
+.chapterContent p img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 处理可能的表格中的图片 */
+.chapterContent table img {
+  max-width: 100%;
+  height: auto;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  color: #7f8c8d;
+  text-align: center;
+  padding: 2rem;
+}
+
+.chapterFooter {
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 0 0 10px 10px;
+  border-top: 1px solid #eee;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.completionStatus {
+  flex: 1;
+}
+
+.completed {
+  display: flex;
+  align-items: center;
+  color: #27ae60;
+  font-weight: 500;
+}
+
+.checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #27ae60;
+  color: white;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.inProgress {
+  color: #3498db;
+}
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+}
+
+.backToCourse {
+  padding: 0.8rem 1.5rem;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.backToCourse:hover {
+  background-color: #dde4e6;
+}
+
+.nextButton {
+  padding: 0.8rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.nextButton:hover {
+  background-color: #2980b9;
+}
+
+.nextButton:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* 检查点样式 */
+.checkPoints {
+  margin: 2rem 0;
+}
+
+.checkPoint {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.checkPoint h3 {
+  margin: 0 0 1rem 0;
+  color: #2c3e50;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.question p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.option {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.option:hover {
+  border-color: #3498db;
+  background-color: #f0f8ff;
+}
+
+.option label {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  width: 100%;
+  gap: 0.8rem;
+}
+
+.option input[type="radio"] {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.optionText {
+  flex: 1;
+  line-height: 1.5;
+}
+
+.option input[type="radio"]:checked + .optionText {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.option:has(input[type="radio"]:checked) {
+  border-color: #3498db;
+  background-color: #e3f2fd;
+}
+
+/* 检查点操作按钮区域 */
+.checkPointActions {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.submitButton {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #219a52;
+}
+
+.submitButton:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* 结果显示 */
+.result {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.result.passed {
+  background-color: #d5f4e6;
+  color: #27ae60;
+  border: 1px solid #27ae60;
+}
+
+.result.failed {
+  background-color: #ffeaea;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+.resultIcon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* 禁用状态 */
+.option.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.option.disabled label {
+  cursor: not-allowed;
+}
+
+/* 代码检查点样式 */
+.codeQuestion {
+  margin-top: 1rem;
+}
+
+.codeEditor {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.codeActions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.resetButton {
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.resetButton:hover:not(:disabled) {
+  background-color: #7f8c8d;
+}
+
+.resetButton:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* 编译输出显示样式 */
+.outputSection {
+  margin: 1rem 0;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.outputSection h4 {
+  margin: 0 0 0.5rem 0;
+  color: #2c3e50;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.outputSection h4::before {
+  content: "🔧";
+  font-size: 1.1rem;
+}
+
+.output {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border: 1px solid #444;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* 输出内容的特殊样式 */
+.output.error {
+  border-left: 4px solid #e74c3c;
+  background-color: #2c1810;
+}
+
+.output.success {
+  border-left: 4px solid #27ae60;
+  background-color: #1a2c1a;
+}
+
+/* 章节已通过提示样式 */
+.chapterPassedNotice {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: #d5f4e6;
+  border: 1px solid #27ae60;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.passedIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #27ae60;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.chapterPassedNotice strong {
+  color: #27ae60;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.chapterPassedNotice p {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 0.95rem;
+} 
