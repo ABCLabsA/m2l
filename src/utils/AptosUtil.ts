@@ -18,7 +18,7 @@ export class AptosUtil {
     coinAmount: number, 
     nonce: string, 
     signatureBytes: number[],
-    courseBadge: string
+    // courseBadge: string
   ): Promise<SimpleTransaction> {
     const reward = coinAmount.toString() + "00000000"
     const transaction = this.client.transaction.build.simple({
@@ -32,7 +32,7 @@ export class AptosUtil {
              // points: u64  
                 nonce,              // nonce: String (TypeScript string 会自动转换为 Move String)
                 signatureBytes,     // signature: vector<u8> (number[] 会自动转换为 vector<u8>)
-                courseBadge,        // course_badge: String
+                // courseBadge,        // course_badge: String
             ]
         }
     })
