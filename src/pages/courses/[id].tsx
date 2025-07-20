@@ -201,7 +201,7 @@ const CourseDetail: NextPage = () => {
             course.finishReward, 
             result.data.nonce, 
             result.data.publicKey.map(str => parseInt(str, 10)),
-            // course.badge || ''
+            course.badge || ''
           );
           
           console.log("生成的交易:", transaction);

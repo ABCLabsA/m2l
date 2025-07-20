@@ -157,7 +157,6 @@ if [ "$DRY_RUN" = false ]; then
       --exclude='.next' \
       --exclude='.git' \
       --exclude='*.log' \
-      --exclude='.env*' \
       --exclude='build-temp' \
       --exclude='._*' \
       --exclude='.DS_Store' \
