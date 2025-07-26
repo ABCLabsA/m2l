@@ -6,7 +6,7 @@ export class AptosUtil {
 
   public constructor() {
     const config = new AptosConfig({
-      network: Network.TESTNET,
+      network: Network.MAINNET,
     });
     this.client = new Aptos(config);
   }
@@ -34,6 +34,9 @@ export class AptosUtil {
                 signatureBytes,     // signature: vector<u8> (number[] 会自动转换为 vector<u8>)
                 courseBadge,        // course_badge: String
             ]
+        },
+        options: {
+          maxGasAmount: 20000 // 这里设置最大 gas，单位是 Octa（1 APT = 100,000,000 Octa）
         }
     })
     return transaction;

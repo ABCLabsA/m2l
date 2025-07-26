@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { AptosWalletAdapterProvider } from '@aptos-labs/wallet-adapter-react';
 import { Network } from '@aptos-labs/ts-sdk';
 import type { AppProps } from 'next/app';
-import { config } from '../config/web3';
 import { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import '../styles/globals.css';
@@ -45,7 +44,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <AptosWalletAdapterProvider
         autoConnect={false}
         dappConfig={{ 
-          network: Network.TESTNET,
+          network: Network.MAINNET,
         }}
         onError={(error) => {
           // 只在开发环境下打印详细错误信息
